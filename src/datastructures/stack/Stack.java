@@ -33,12 +33,10 @@ public class Stack {
 
     public void push(int value) {
         Node newNode = new Node(value);
-        if(height == 0) {
-            top = newNode;
-        } else {
+        if (top != null) {
             newNode.next = top;
-            top = newNode;
         }
+        top = newNode;
         height++;
     }
     public Node pop() {
